@@ -1,7 +1,7 @@
 {
-  "name": "chaz-acme-explosives",
+  "name": "basic-template",
   "version": "1.0.0",
-  "description": "This is a grunt test file",
+  "description": "This is a basic template with no front end js frameworks",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
