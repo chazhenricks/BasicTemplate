@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Base Package.Json for initial JS dev",
   "scripts": {
-    "start": "node buildScripts/srcServer.js"
+      "prestart": "node buildScripts/startMessage.js",
+      "start": "node buildScripts/srcServer.js"
   },
   "author": "Cory House",
   "license": "MIT",
