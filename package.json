@@ -2,7 +2,9 @@
   "name": "javascript-dev-environment",
   "version": "1.0.0",
   "description": "Base Package.Json for initial JS dev",
-  "scripts": {},
+  "scripts": {
+    "start": "node buildScripts/srcServer.js"
+  },
   "author": "Cory House",
   "license": "MIT",
   "dependencies": {
