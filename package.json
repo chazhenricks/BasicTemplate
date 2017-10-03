@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Base Package.Json for initial JS dev",
   "scripts": {
-      "prestart": "node buildScripts/startMessage.js",
+      "prestart": "babel-node buildScripts/startMessage.js",
       "start": "npm-run-all --parallel security-check start-server",
-      "start-server": "node buildScripts/srcServer.js",
+      "start-server": "babel-node buildScripts/srcServer.js",
       "security-check": "nsp check",
       "localtunnel": "lt --port 3000",
       "share": "npm-run-all --parallel start-server localtunnel"
