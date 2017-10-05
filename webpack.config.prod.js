@@ -1,6 +1,7 @@
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
+import ExtractTextPlugin from 'extract-text-webpack-plugin';
 
 export default {
   debug: true,
@@ -17,6 +18,8 @@ export default {
     filename: '[name].js'
   },
   plugins: [
+      //Generate external css file
+      new ExtractTextPlugin('[name].css'),
       //Use CommonsChunkPlugin to create seperatebundle of vendor libraries so that theyre cached seperately
       new webpack.optimize.CommonsChunkPlugin({
           name: 'vendor'
@@ -47,7 +50,7 @@ export default {
   module: {
     loaders: [
       {test: /\.js$/, exclude: /node_modules/, loaders: ['babel']},
-      {test: /\.css$/, loaders: ['style','css']}
+      {test: /\.css$/, loader: ExtractTextPlugin.extract('css?sourceMap')}
     ]
   }
 }
